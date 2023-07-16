@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>TIKET BIOSKOP - Booking Tiket</title>
+</head>
+
+<body>
+    <header>
+        <h1>TIKET BIOSKOP</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="daftar_film.html">Daftar Film</a></li>
+            <li><a href="booking.html">Booking Tiket</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>Booking Tiket</h2>
+        <form id="bookingForm" action="order.php" method="post">
+            <label for="film">Pilih Film:</label>
+            <select name="film" id="film">
+                <option value="Film 1">Film 1</option>
+                <option value="Film 2">Film 2</option>
+                <option value="Film 3">Film 3</option>
+                <!-- Daftar film lainnya -->
+            </select>
+            <label for="jumlahTiket">Jumlah Tiket:</label>
+            <input type="number" name="jumlahTiket" id="jumlahTiket" min="1" required>
+            <button type="submit" value="submit">Pesan Tiket</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy;
+            <?php echo date("Y"); ?> Bioskop Anggun. All rights reserved.
+        </p>
+    </footer>
+</body>
+
+</html>
